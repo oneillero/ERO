@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Geometric Shape</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <svg id="svg" ref="svg">
+      <g :transform="transform">
+        <polygon v-for="i in numPolygons" :key="tkey(i)" :points="points(i)" :style="style(i)" class="triangle"></polygon>
+        <polygon v-for="i in (numPolygons-1)" :key="tkey(numPolygons+i)" :points="points(numPolygons-i)" :style="style(numPolygons+i)" class="triangle"></polygon>
+      </g>
+    </svg>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

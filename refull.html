@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERO POST THREE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #0b0b0b;
+    }
+
+    body {
+      font-family: Optima, sans-serif;
+      background-color: #9e9e9e;
+    }
+
+    .header {
+      position: relative;
+      height: 33.33vh;
+      background-image: linear-gradient(to bottom, #080808, #1e3c72);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #9e9e9e;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      font-weight: lighter;
+      color: #4e2a18;
+      font-family: Optima, sans-serif;
+      padding-top: 40px;
+    }
+
+    .divider {
+        width: 100%;
+        height: 0;
+        border-bottom: 2px solid #79866f;
+        transform: skewY(-4deg);
+        transform-origin: 0;
+    }
+
+    .content {
+      padding: 80px;
+      text-align: justify;
+    }
+
+    h1, h2 {
+      margin-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Integrating React with JS and Python</h1>
+  </div>
+  <div class="divider"></div>
+  <div class="content">
+    <h2>Featured Post III | ER Oneill</h2>
+    <p style="text-align: justify; text-indent: 50px;">
+      React is a popular JavaScript library that provides a rich set of development tools used for building user interfaces. It is an open-source library first released by Facebook in 2013. It is based on the concept of reusable components which allows developers to easily build complex user interfaces that are distinct from other sites. React web sites tend to have more dynamic user interfaces offering a seamless and memorable experience which it does through the use of a virtual DOM. DOM stands for Document Object Model, which is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. A virtual DOM however, is a programming concept where a virtual representation of the actual DOM is created in memory to manage updates and optimize web page rendering.
+    </p>
+
+      <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Since the React architecture is component-based, developers are able to build, test, and maintain their projects with more organization and higher efficiency. This can help code become cleaner and more precise, rendering increased performance times when compared to code written with traditional web development technologies. In order to use React effectively, it is important to have a strong understanding of JavaScript and any other language that might be integrated into the project. Although Python is not the user choice for React, Python and JavaScript are the two most widely used languages today. For this reason, I decided to discuss React integration with both languages. Please take note that I am not incorporating any formatting to the code snippets in this post.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Python is an interpreted, high-level programming language that is known for its simplicity and readability. It is widely used in the development of various applications, including back-end web development, data analysis, and machine learning. Python's ease of use makes it an attractive language for developers with varying skill levels. It can be enjoyed by beginners yet, it can provide the power and flexibility to handle complex tasks, such as physics simulations and mathematical vector models. Python's ability to work seamlessly with other programming languages, like JavaScript, also makes it a valuable tool in scalable web application development.
+    </p>
+
+      <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Working with React and Python allows developers to separate the front-end and back-end aspects of their applications. This means that the user interface can be built using React, while the application logic and data processing can be handled by Python. There are multiple ways to integrate React with Python. One way is to use a Python web framework such as Flask to create the back-end of the application and then use React on the front-end to create a dynamic user interface. Another way is to use a tool like PyReact, which allows developers to write React code in Python. A JavaScript compiler can be used to turn JSX syntax intoPython code. These are the two common integration methods that I will detail in this post.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      PyReact is a library that allows developers to write React components in Python. It is built on top of the React.js library and allows Python developers to take advantage of the powerful React.js framework for building complex user interfaces. PyReact uses a Python-to-JavaScript compiler to convert Python code into JavaScript, which can then be run in a web browser. With PyReact, Python developers can create React web applications without having to learn JavaScript. Although this can save time and resources, it is worth noting that PyReact is not as widely used as React.js with JavaScript, and some of the features may not be as fully developed as in the JavaScript version.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Assuming the Python language is already installed, The general steps for using PyReact begins with installation of the required dependencies, including PyReact, node.js, and the React libraries. This can be done using 'pip with pip install pyreact' on the local environment or IDE terminal window whether PyCharm, VS Code, or an alternative. PyReact can be imported into the project using 'from pyreact import React'. It is important to create a virtual environment to isolate the project and set up a basic React component in a .jsx file.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Once this is set up, the code is written, and all tests have been successfully passed, the component is ready to be rendered. In order for the component to be successfully rendered, it must be defined. In the following code snippet, a function titled Greetings that takes a parameter titled props is being defined. The function returns a React element created with the React.createElement() method, which displays a greeting message with the name passed in as a prop. In React, props are used to pass data between components:
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center;">
+      <br><br>
+      def Greetings(props):
+      <br><br>
+      return React.createElement("div", None, f"Hello, {props['name']}!")
+      <br><br>
+      </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Next, render the component using PyReact's 'render' function which will print the message 'Hello World'. With this code snippet, the Greetings component with the name prop is set to "World" in an HTML div element with an ID of app. Once this is accomplished, the React project is ready to be built.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center;">
+      <br><br>
+      from pyreact import render
+      <br><br>
+      render(React.createElement(Greeting, {"name": "World"}), "app")
+      <br><br>
+      </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      The second option is to integrate React with Python using a Python framework such as Flask to create the back-end of the application. With this option, React is used on the front-end to create a dynamic user interface. Integrating React with Python in this way involves creating a REST API and using React to retrieve the data and render the user interface. This can be a complicated process however, it is more commonly used because it allows for improved data storage and more precise manipulation. A REST API is a type of web API that allows interaction with web resources using the HTTP protocol. It follows the REST architectural style and uses standard HTTP methods to perform operations on data. A REST API typically returns data in a lightweight format such as JSON or XML, making it easy to retrieve by client-side applications. REST APIs are widely used in web development to provide a standardized and efficient way of communicating between servers and clients.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      There are several Python web frameworks that can be used to create a REST API; however, for the purpose of this paper, I will elaborate on one. Flask is a lightweight web framework that is easy to use and has a low learning curve. It allows developers to choose the components they need and easily integrate them into their application, making it a good choice for small to medium-sized projects or prototyping. I will use Flask in the following example where we create a Flask application and define a route that returns a JSON object with the message "Hello, World!". We then run the application using the app.run() method:
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center;">
+      <br><br>
+      from flask import Flask, jsonify
+      <br><br>
+      app = Flask(__name__)
+      <br><br>
+      @app.route('/api/hello')
+      <br><br>
+      def hello():
+      <br><br>
+      return jsonify({'message': 'Hello, World!'})
+      <br><br>
+      if __name__ == '__main__':
+      <br><br>
+      app.run(debug=True)
+      <br><br>
+      </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Once this is complete, the next step is to create a React application and retrieve the data from the REST API. A react application can quickly be created using the npx create-react-app my-app command-line tool, which creates a new React project with all the necessary files and configurations. This can be done using the Fetch API, which is a built-in feature of modern web browsers that allows data to be fetched from a remote server.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center;">
+      <br><br>
+      import React, { useState, useEffect } from 'react';
+      <br><br>
+      function App() {
+      <br><br>
+      const [message, setMessage] = useState('');
+      <br><br>
+      useEffect(() => {
+      <br><br>
+      fetch('/api/hello')
+      <br><br>
+      .then(response => response.json())
+      <br><br>
+      .then(data => setMessage(data.message));}, []);
+      <br><br>
+      return (return (
+      <br><br>
+      < div>
+      <br><br>
+      < h1>{message}< /h1>
+      <br><br>
+      < /div>);}
+      <br><br>
+      export default App;
+      <br><br>
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Now, we are able to create a React component called App that uses the Fetch API to fetch data from the /api/hello endpoint of the Flask REST API. Then, the useState and useEffect hooks are used to update the state of the component and render the message returned by the REST API. The project is ready for more complex development.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Python is not typically the first choice for integrating with React, as React is a JavaScript library and works most seamlessly with JavaScript. However, Python does have its own advantages, particularly for back-end development and data analysis. For those interested in utilizing React with Python, it is important to have a strong understanding of both languages (Python and JavaScript) and their integration processes. In the following section, we will explore how to integrate React with JavaScript and the various benefits and tools available for developers to enhance their projects.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      JavaScript is an incredibly versatile programming language that can be used for a wide range of projects, from front-end web development to back-end server-side scripting. It is a high-level language that is interpreted at runtime, allowing developers to create dynamic and interactive user experiences. Its popularity has led to the development of many frameworks and libraries, including React. React is fundamentally rooted in the JavaScript programming language and has the ability to enhance JavaScripts capabilities. JavaScript is the primary language used in React development and when people think of React, they typically associate it with JavaScript.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Integrating React with JavaScript is a much more straightforward process than Python that can be done in a few steps. It involves the installation of the React library and its dependencies, which can be easily done using a package manager like npm. Once installed, developers can create React components using JavaScript, allowing for seamless integration with existing JavaScript code. React offers a range of tools and features that make it an excellent choice for front-end development, including its famed virtual DOM, reusable components, and one-way data binding. By integrating React with JavaScript, developers can take advantage of these features to build highly dynamic and interactive user interfaces that are both efficient and scalable.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      The first step in integrating React with JavaScript is to install React. React can be installed using the npm package manager. To install React, open the terminal and run the npm install react react-dom command. This will install both React and ReactDOM, which is a package used for rendering React components in the DOM. Once that is complete, a React component needs to be created. A React component is a reusable, modular building block for constructing user interfaces. React components can be created using the ES6 class syntax. Once the React library has been imported, a class called MyComponent that extends the React.Component class is created. The render method returns a JSX element that renders a div with an h1 element inside:
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center;">
+      <br><br>
+      import React from 'react';
+      <br><br>
+      class MyComponent extends React.Component {
+      <br><br>
+      render() {
+      <br><br>
+      return (
+      <br><br>
+      < div>
+      <br><br>
+      < h1>Hello, World!< /h1>
+      <br><br>
+      < /div>);}}
+      <br><br>
+      </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      The final step in integrating React with JavaScript is to render the component in the DOM. To render a React component, we need to use the ReactDOM.render() method to render the MyComponent component in the root element of the HTML document:
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center;">
+      <br><br>
+      import React from 'react';
+      <br><br>
+      import ReactDOM from 'react-dom';
+      <br><br>
+      import MyComponent from './MyComponent';
+      <br><br>
+      ReactDOM.render(<MyComponent />, document.getElementById('root'));
+      <br><br>
+      </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      It is easy to notice the stark contrast between efficiency when integrating React with JavaScript versus Python. Integrating React with JavaScript enhances the developer's ability to build dynamic, interactive web applications while Python integration can be more challenging and not as widely implemented. JavaScript is a simple, straightforward process that involves installing React, creating a React component, and rendering the component in the DOM. Whether it's front-end design, back-end scripting, or data analysis, React and JavaScript can help create clean, efficient, and effective code. By utilizing these powerful tools and constantly expanding one's knowledge of web development, the possibilities are endless. Becoming proficient in React, JavaScript, and other in-demand programming languages can unlock a world of endless possibilities and opportunities in the rapidly-evolving field of web development. New understandings can lead to new lucrative and fulfilling career opportunities as a skilled developer. The potential for creative projects enabled by these tools is truly remarkable.
+    </p>
+      
+        <br><br>
+
+  </div>
+  <script>
+    document.addEventListener('scroll', function() {
+      const header = document.querySelector('.header');
+      const scrollPosition = window.pageYOffset;
+      header.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+    });
+  </script>
+</body>
+</html>

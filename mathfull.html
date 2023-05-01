@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERO POST ONE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #0b0b0b;
+    }
+
+    body {
+      font-family: Optima, sans-serif;
+      background-color: #9e9e9e;
+    }
+
+    .header {
+      position: relative;
+      height: 33.33vh;
+      background-image: linear-gradient(to bottom, #080808, #1e3c72);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #9e9e9e;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      font-weight: lighter;
+      color: #4e2a18;
+      font-family: Optima, sans-serif;
+      padding-top: 40px;
+    }
+
+    .divider {
+        width: 100%;
+        height: 0;
+        border-bottom: 2px solid #79866f;
+        transform: skewY(-4deg);
+        transform-origin: 0;
+    }
+
+    .content {
+      padding: 80px;
+      text-align: justify;
+    }
+
+    h1, h2 {
+      margin-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>The Mathematical Forms of JavaScript</h1>
+  </div>
+  <div class="divider"></div>
+  <div class="content">
+    <h2>Featured Post I | ER Oneill</h2>
+    <p style="text-align: justify; text-indent: 50px;">
+      Mathematics has played a crucial role in shaping our understanding of the world and driving technological advancements. It serves as the foundation for our rational understanding and technological advancements, driving historical paradigm shifts. One of the most recent and significant shifts incorporated the advent of the computer. In 1936, Alan Turing published a paper titled "On Computable Numbers, with an Application to the Entscheidungsproblem,". This laid the groundwork for the development of the modern computer. As computers evolved, so did programming, giving birth to high-level languages like Fortran and COBOL. In 1995, Brendan Eich created what is now called JavaScript. This is a versatile language that revolutionized web development and became instrumental in allowing complex mathematical calculations to be executed on the client-side of web applications.
+    </p>
+
+      <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Mathematics plays an integral role in the functionality of JavaScript. It allows developers the ability to create complex and dynamic web applications for use in a broad range of industries. This ability is crucial for various aspects of web design and user experience. In this post, I outline the mathematics of JavaScript, dive into a few of the built-in trigonometric functions, and discuss how to effectively employ these functions. Understanding this will help developers utilize mathematical principles and use these tools to optimize their work in web design.
+    </p>
+
+      <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Geometry and trigonometry are built on the fundamental laws of sine, cosine, and tangent. These laws provide a powerful means of describing both physical and abstract concepts through equations. Mathematics offers a comprehensive system for describing and analyzing the properties of shapes in two-dimensional and three-dimensional spaces. In JavaScript, trigonometric functions like sine and cosine expect their input angles to be in radians, not degrees. In the following code snippet, a variable titled angle is created and set to 90 degrees. To convert this angle from degrees to radians, we multiply it by the constant Math.PI and then divide the result by 180. This converts the angle to radians, which we then pass to the Math.sin() function to calculate its sine value. The result of the calculation is then stored in the variable titled sineValue, which is logged to the console using console.log(). The output of this code is 1, because the sine of 90 degrees (or π/2 radians) is equal to 1:
+    </p>
+
+      <br><br>
+
+    <p style="text-align: center; text-indent: 50px;">
+      <br></br>
+      let angle = 90;
+      <br></br>
+      let sineValue = Math.sin(angle * Math.PI / 180);
+      <br></br>
+      console.log(sineValue);
+      <br></br>
+    </p>
+
+      <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      JavaScript's default unit for trigonometric functions is radians and not degrees because radians offer a more simplistic, dimensionless approach to calculations, eliminating the need for conversions. Developers learning JavaScript should gain an understanding of the language's mathematical functions, which are crucial for both data processing and designing interactive applications. Although there are numerous built-in functions, I chose to briefly introduce three common math functions that I have encountered throughout my JavaScript journey:
+    </p>
+
+      <br><br>
+
+    <p style="text-align: 50px;">
+      1. Math.floor(): This JavaScript math function rounds a given number down to the nearest integer. This function is important because, in many programming contexts, whole numbers are preferred over decimal or fractional values.
+      <br></br>
+      2. Math.PI: This constant represents the value of pi (3.14159). It can be used in conjunction with Math.sin() and Math.cos() to generate circular motion in visualizations.
+      <br></br>
+      3. Math.random(): This function generates a random number between 0 (inclusive) and 1 (exclusive). This function is essential because it provides a simple way to generate random numbers, which is beneficial in statistical analysis and game development.   
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      JavaScript's built-in mathematical functions are powerful tools for creating forms and animations, ranging from simple geometric shapes to more complex designs like the Mandelbrot set and spirographs. Developers can use these functions to generate 3D shapes such as cubes, spheres, and pyramids and combine them with other techniques like shading and texture mapping to create even more intricate designs.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      For those interested in creating more complex shapes and animations, JavaScript also provides access to a wide range of libraries and frameworks. CANNON.js is a physics engine for JavaScript. It can be used to create realistic physics simulations for 3D objects. Math.js is a JavaScript library that offers advanced mathematical functions and tools for numerical computation, including support for matrix and vector operations, complex numbers, and even quaternion analysis. With JavaScript, developers can work with both simple and complex mathematical based concepts and designs. For the purpose of this post, I will focus on basic examples. Please take note that I am not incorporating any formatting to the code snippets in this post.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      One basic example that illustrates JavaScript's ability to create a mathematical design involves drawing shapes on a canvas. The HTML5 canvas element provides a way to dynamically create and manipulate graphics using JavaScript. When utilizing the HTML5 canvas, the developer can create a simple circle animation using the Math.cos() and Math.sin() functions to calculate the x and y coordinates of each point on the circle's circumference. Following is an example of how to instruct the computer to draw a simple circle using JavaScript:
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center; text-indent: 50px;">
+      <br></br>
+      let canvas = document.getElementById("myCanvas");
+      <br></br>
+      let context = canvas.getContext("2d");
+      <br></br>
+      let centerX = canvas.width / 2;
+      <br></br>
+      let centerY = canvas.height / 2;
+      <br></br>
+      let radius = 50;
+      <br></br>
+      context.beginPath();
+      <br></br>
+      for (let angle = 0; angle < 2 * Math.PI; angle += 0.01) {
+      <br></br>
+      let x = centerX + radius * Math.cos(angle);
+      <br></br>
+      let y = centerY + radius * Math.sin(angle);
+      <br></br>
+      context.lineTo(x, y);}
+      <br></br>
+      context.stroke();
+      <br></br>
+    </p>
+      
+        <br><br> 
+
+    <p style="text-align: justify; text-indent: 50px;">
+      This code creates a canvas element with an id of "myCanvas" and gets a 2D rendering context and defines variables for the center coordinates of the canvas and a radius value. Then it begins a new path on the canvas using the beginPath() method. It loops through a range of angles, starting from 0 radians and increasing by 0.01 radians each time, until it reaches 2π radians. Within this loop, the code calculates the x and y coordinates of points along a circle using the Math.cos() and Math.sin() functions (trigonometry). The centerX and centerY variables are used as the center of the circle, and the radius variable is used as the distance from the center of the circle to each point. The calculated x and y values are then used as the end points of line segments drawn on the canvas with the lineTo() method. Finally, the code strokes the path on the canvas using the stroke() method, which draws the line segments on the canvas. A circle is drawn with a radius of 50 pixels in the center of the canvas, using the Math.cos() and Math.sin() functions to calculate the x and y coordinates of points along the circle.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      For a challenging example, I chose to proceed with a code snippet that describes a more complex spirograph animation. A spirograph is a geometric drawing that generates intricate patterns by combining two or more rotating circles. To create a spirograph, you begin with a fixed circle and a smaller mobile circle. Place the mobile circle inside the fixed circle and start rotating it around the fixed circle's center. As the mobile circle rotates, it forms a pattern by tracing the path of a point on its circumference. The resulting design can vary depending on changes in two parameters: circle size and rotational speed. In web development, an animated spirograph can be created using JavaScript and the HTML5 canvas element:
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center; text-indent: 50px;">
+      <br></br>
+      let mobileX = fixedX + distance * Math.cos(angle);
+      <br></br>
+      let mobileY = fixedY + distance * Math.sin(angle);
+      <br></br>
+      context.beginPath();
+      <br></br>
+      context.moveTo(prevX, prevY);
+      <br></br>
+      context.lineTo(mobileX, mobileY);
+      <br></br>
+      context.stroke();
+      <br></br>
+      prevX = mobileX;
+      <br></br>
+      prevY = mobileY;
+      <br></br>
+      angle += speed;
+      <br></br>
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      This code snippet calculates the x and y coordinates (position) of the mobile circle at each frame of the animation using sine and cosine functions (Math.sin() and Math.cos()). It draws a line between the previous position and the current position using context.moveTo() and context.lineTo(). After, it strokes the line using context.stroke() and updates the previous position with the current position. Finally, it increments the angle by the speed for the next frame of the animation. To create an animated spirograph, you would need to use JavaScript to update the position of the mobile circle at regular intervals and redraw the pattern on the canvas.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Creative coding can be a highly rewarding experience for developers, offering numerous opportunities for learning and exploration. As demonstrated by the previous examples, creative coding often involves the use of visual or interactive media, and can encompass a wide range of techniques and approaches. In addition to animation and other visual effects, developers can also use mathematical programming to create aesthetically pleasing website formats and layouts based on rules such as the Golden Ratio and the Fibonacci Sequence.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Websites that are visually appealing and easy to navigate can help to attract and retain visitors, keeping them engaged with the content for longer periods of time. This can help to improve a business's reputation, increase customer satisfaction, and ultimately drive more traffic and sales. These mathematical concepts can also contribute to a more intuitive and user-friendly design. By applying the laws of proportion, developers can seamlessly guide the placement of elements like images, text, and navigation menus. creating a layout that feels natural. Let's take a look at how we can code the Golden Ratio and the Fibonacci Sequence for layout optimization:
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center; text-indent: 50px;">
+      Golden Ratio | The Golden Ratio, also known as the Golden Section or Divine Proportion, is a mathematical ratio of approximately 1.618. It is an irrational number, which means that its decimal expansion goes on infinitely without repeating. The Golden Ratio is found in many natural phenomena, including the proportions of the human body, the spirals of seashells and galaxies, and the growth patterns of plants. It has been used by artists, architects, and designers throughout history to create aesthetically pleasing proportions and compositions. It has been studied extensively in many areas of mathematics, including geometry, number theory, and algebra. It can be used to create aesthetically pleasing designs in web development by using it to determine the size and proportions of elements on a page. Here is an example of how to use the Golden Ratio in JavaScript:
+      </p>
+      
+        <br><br>
+
+    <p style="text-align: center; text-indent: 50px;">
+      <br></br>
+      let contentWidth = window.innerWidth * 0.618;
+      <br></br>
+      let contentHeight = contentWidth * 0.618;
+      <br></br>
+      let contentArea = document.getElementById("content-area");
+      <br></br>
+      contentArea.style.width = contentWidth + "px";
+      <br></br>
+      contentArea.style.height = contentHeight + "px";
+      </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      This code calculates the dimensions of the main content area on a webpage using the Golden Ratio . The width of the content area is set to 61.8% of the width of the browser window, and the height is set to 61.8% of the width. It calculates the width and height of a content area based on the golden ratio (0.618) to determine the proportions. It then sets the width and height of the content area element with an id of "content-area" using the calculated values. The window.innerWidth property returns the width of the browser window in pixels, and the first two lines of the code multiply this value by 0.618 to get the desired content width and height based on the golden ratio. The contentArea variable is then assigned a reference to the DOM element with an id of "content-area", and the style.width and style.height properties of this element are set to the calculated content width and height, respectively, with the "px" unit appended to the values to indicate that they are in pixels.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Fibonacci Sequence | The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding numbers. The sequence starts with 0, 1, and then each subsequent number is the sum of the two preceding numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, and so on. The Fibonacci sequence is named after Leonardo Fibonacci, an Italian mathematician who introduced the sequence to Western mathematics in his book Liber Abaci, which he wrote in 1202. The sequence occurs naturally in many phenomena, including the branching patterns of trees, the spirals of shells and galaxies, and the breeding patterns of rabbits.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      The Fibonacci sequence has many interesting properties and relationships, and, similar to the Golden Ratio, it has been studied extensively in number theory and other areas of mathematics. The sequence also has many practical applications, such as in computer algorithms, data compression, and finance. It can be used to model various events such as stock prices and interest rates. This sequence has also been harnessed substantially in art and design. In web development, the Fibonacci Sequence can be used to create visually interesting patterns and layouts:
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: center; text-indent: 50px;">
+      <br></br>
+      let fib = [1, 1];
+      <br></br>
+      while (fib[fib.length - 1] < 1000) {
+      <br></br>
+      fib.push(fib[fib.length - 1] + fib[fib.length - 2]);}
+      <br></br>
+      let contentBlocks = document.getElementsByClassName("content-block");
+      <br></br>
+      for (let i = 0; i < contentBlocks.length; i++) {
+      <br></br>
+      contentBlocks[i].style.top = fib[i] + "px";
+      <br></br>
+      contentBlocks[i].style.left = fib[i + 1] + "px";}
+      <br></br>
+      </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      This code generates a Fibonacci sequence and uses the values in the sequence to position HTML elements on a webpage. The fib array is initialized with the first two values of the Fibonacci sequence, which are both 1. The while loop then generates subsequent values in the sequence by adding the last two values of the array together and appending the sum to the end of the array. The loop continues until the last value in the array is greater than or equal to 1000. The contentBlocks variable is then assigned references to all the HTML elements with a class, content-block. The for loop then loops through all the elements and sets their style.top and style.left properties to the Fibonacci values at the corresponding indices in the fib array. Specifically, the top property of the i-th element is set to the i-th Fibonacci number in pixels, and the left property is set to the (i+1)-th Fibonacci number in pixels. By applying mathematical principles such as these, web designers can create layouts that are both functional and visually pleasing, resulting in a more engaging and satisfying user experience.
+    </p>
+      
+        <br><br>
+
+    <p style="text-align: justify; text-indent: 50px;">
+      Mathematics is the foundation of our rational understanding and plays a critical role in the functionality of JavaScript. It allows developers to create complex and dynamic web applications and is essential for data processing and designing interactive applications. Creative coding using mathematical concepts like geometry, trigonometry, the Golden Ratio, and the Fibonacci Sequence can create balanced yet engaging layouts for websites, making them stronger marketing tools for any business or idea. By using proportions found in nature and the human body, designers can create a sense of harmony and order that contributes to attracting and retaining visitors while improving visitor behavior. This could potentially increase ROI, or gain a wider audience to spread a message. Whatever the goal is, math can help.
+    </p>
+      
+        <br><br>
+
+  </div>
+  <script>
+    document.addEventListener('scroll', function() {
+      const header = document.querySelector('.header');
+      const scrollPosition = window.pageYOffset;
+      header.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+    });
+  </script>
+</body>
+</html>

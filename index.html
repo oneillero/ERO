@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E | R | O</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="geo/style.css">
+    <script src="geo/main.js" defer></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./photos/erologo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Links</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#blog">Posts</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+                <div class="header-container">
+                    <div class="header-text">
+                        <p>ER ONEILL</p>
+                        <h2>Artist</h2>
+                        <h2>Full Stack Developer</h2>
+                        <h2>Student of Computatoinal Neuroscience</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="geo-animation">
+        <div id="app">
+            <svg id="svg" ref="svg">
+                <g :transform="transform">
+                    <polygon 
+                    v-for="i in numPolygons" 
+                    :key="tkey(i)" 
+                    :points="points(i)" 
+                    :style="style(i)"
+                    class="triangle"
+                    ></polygon>
+                    <polygon 
+                    v-for="i in (numPolygons-1)" 
+                    :key="tkey(numPolygons+i)"
+                    :points="points(numPolygons-i)" 
+                    :style="style(numPolygons+i)" 
+                    class="triangle"
+                    ></polygon>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        const geoAnimation = document.getElementById("geo-animation");
+        const scrollPos = document.documentElement.style.setProperty("--scroll-pos", window.scrollY);
+
+        window.addEventListener("scroll", () => {
+            const scrollPos = window.scrollY;
+            document.documentElement.style.setProperty("--scroll-pos", scrollPos);
+            geoAnimation.style.transform = `translateY(calc(-1 * var(--scroll-pos) * 0.5px))`;
+        });
+    </script>
+</body>
+
+</html>
+
+
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="./photos/white.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About</h1>
+                <p style="text-align: justify;">My education began at Pratt Institute where I studied fine art with an interest in medical illustration. Following my creative studies, I began working predominately as a Freelance Artist, broadening my skillset. I had the honor of collaborating on a wide range of projects including digital, architectural, and small business branding and marketing. <br><br> I also worked as the Assistant Director and Treasurer of The Bend Academy of Art (501c3). I built and maintained the business's web presence, designed and launched marketing campaigns, and focued on optimizing educational opportunities for the local community. During this time, I began studying the sciences behind aesthetics through my local community colleges. There, I was introduced to neuroscience and computer programming. Preceding the unfortunate closure of The Bend Academy of Art during the Covid-19 pandemic, my academic focus and life's work shifted completely to neuroscience and technology.<br><br>
+
+                    Currently, I study Software Development with MITxPRO and Computational Neuroscience at UAZ. I am investigating the brain's fundamental functions while preparing for a career in AI/ML development. Gaining experience as a developer is imperative for the growth of my career. I am passionate about my work and education. I approach challenges and obstacles as opportunities to improve. My work ethic, combined with my adaptability and resourcefulness, enables me to consistently deliver exceptional results even in high-pressure environments. I believe driving progress and achieving success requires growth through innovative solutions.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Design</span><br>Architectural | Digital | Traditional</li>
+                        <li><span>Development</span><br>MERN | Javascript | Python</li>
+                        <li><span>Business</span><br> Leadership | Management | Strategy </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021 - Current</span><br>Co-Owner of Oneill Farms</li>
+                        <li><span>2009 - Current</span><br>Freelance Artist</li>
+                        <li><span>2018 - 2022</span><br>Assistant Director of The Bend Academy of Art</li>
+                        <li><span>2009 - 2017</span><br>Wilderness First Response and Alpine Rescue</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023</span><br>University of Arizona</li>
+                        <li><span>2023</span><br>MITxPRO</li>
+                        <li><span>2009</span><br>Pratt Institute</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title" style="font-weight: lighter;">Links</h1>
+
+        <div class="services-list">
+            <div>
+                <h2>GitHub</h2>
+                <br>
+                <br>
+                <p style="text-align: justify;">Github is where I store my coding projects and collaborate with others. I will be uploading projects consistently so keep checking back!<br><br>Please click below to view my GitHub.</p>
+                <br>
+                <a href="#"><a href="https://github.com/oneillero">View : GitHub</a></a>
+            </div>
+            <div>
+                <h2>Video</h2>
+                <br>
+                <br>
+                <p style="text-align: justify;">In this video, I discuss my skills, interests, and educational pursuits. Learn more about my work, review my portfolio or contact me direct.<br><br> Please click below to view my intro video.</p>
+                <br>
+                <a href="#"><a href="https://www.youtube.com/watch?v=VirBixGiNss&t=9s">View : Video</a></a>
+            </div>
+            <div>
+                <h2>LinkedIn</h2>
+                <br>
+                <br>
+                <p style="text-align: justify;">Connect and share ideas, check out my portfolio of work, and stay up to date on my latest projects. Get a behind-the-scenes look at my creative process.<br><br>Please click below to view my LinkedIn.</p>
+                <br>
+                <a href="#"><a href="https://www.linkedin.com/in/eroneill/">View : LinkedIn</a></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="./photos/man.png">
+                <div class="layer">
+                    <h3>Pac Man</h3>
+                    <p style="text-align: justify;">Use your arrow keys to help Pac Man move around and consume pellets. Beware of the ghosts! This game implements CSS, HTML, JS, character animation, boundary detection, and more. </p>
+                    <p>Click to view: <a href="https://oneillero.github.io/PMan/">.  PMan  .</a></p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./photos/eyes.png">
+                <div class="layer">
+                    <h3>Moving Eyes</h3>
+                    <p style="text-align: justify;">Move your curser to watch these two eyes follow your movements. This fun program exhibits dynamic and interactive user interfaces and web technologies.</p>
+                    <p>Click to view: <a href="https://oneillero.github.io/TwoEyes/">.  TwoEyes  .</a></p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./photos/ball.png">
+                <div class="layer">
+                    <h3>Bouncing Ball</h3>
+                    <p style="text-align: justify;">Observe this quick moving ball as it randomly bounces in a box. This animation demonstrates object-oriented programing and physical simulation. It takes into account gravity, friction, and momentum.</p>
+                    <p>Click to view: <a href="https://oneillero.github.io/BallE/">.  BallE  .</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ----------blog------------ -->
+<div id="blog">
+    <div class="container">
+        <h1 class="sub-title">Posts</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="./photos/man.png">
+                <div class="blog-layer">
+                    <h3><strong>Mathematical Forms of JavaScript</strong></h3>
+                    <p style="text-align: justify;">Explore the nexus of mathematics and JavaScript and advnace your skillset. Developers can utilize principles from mathematics, optimizing their work in web design. This post provides examples of how concepts such as geometry, trigonometry, and common proportional ratios can be used to create aesthetically pleasing designs for web applications. </p>
+                    <p><a href="mathfull.html">Featured Post I</a></p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./photos/eyes.png">
+                <div class="blog-layer">
+                    <h3><strong>Aesthetics for Front-End Development</strong></h3>
+                    <p style="text-align: justify;">Learn about the science behind visual perception and how it can help developers create more engaging and effective digital platforms. By understanding the impact of light, color, and composition on the human brain, developers can optimize the user experience and influence behavior, leading to better product outcomes.</p>
+                    <p><a href="devfull.html">Featured Post II</a></p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./photos/ball.png">
+                <div class="blog-layer">
+                    <h3><strong>Integrating React with JavaScript and Python</strong></h3>
+                    <p style="text-align: justify;">Discover the power of React and how it can revolutionize your web development projects. This post explores the benefits of utilizing React in development. It also illustrates integration methods of React with Python and JavaScript. It offers practical examples and tips for building dynamic, efficient, and user-friendly web applications.</p>
+                    <p><a href="refull.html">Featured Post III</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact</h1>
+                <p><i class="fas fa-paper-plane"></i> oneillero@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>GV: 209-260-1102</p>
+                <a href="./EROcv.png" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © ERO <i class="fas fa-heart"></i></a></p>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzEB6t_urL9tMUjMD7rHbeh3_pflsXsdA3TRT9-iYfEP8BrqjD_zVvflNv4E8Z96TSy/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const msg = document.getElementById("msg");
+      
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          console.log('Success!', response);
+          msg.textContent = "Message sent successfully!";
+          msg.style.color = "green";
+          form.reset();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          msg.textContent = "Error! Please try again.";
+          msg.style.color = "red";
+        });
+    });
+  </script>  
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>
+<script src="geo/main.js"></script>
+
+</body>
+</html>
