@@ -613,6 +613,14 @@ body {
         overflow: hidden;
         margin-bottom: 20px;
     }
+    .blog-work img{
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.20s;
+}
     
     .sub-title{
         font-size: 40px;
