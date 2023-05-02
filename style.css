@@ -379,6 +379,7 @@ nav ul li a:hover::after{
 .blog-layer h3{
     font-weight: 500;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 .blog-layer a{
     margin-top: 20px;
