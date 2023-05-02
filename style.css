@@ -237,7 +237,7 @@ nav ul li a:hover::after{
 }
 /* -------portfolio----------- */
 #portfolio{
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 .work-list{
@@ -313,7 +313,7 @@ nav ul li a:hover::after{
 
 /* -------blog----------- */
 #blog{
-    padding: 80px 0;
+    padding: 60px 0;
     margin-bottom: 30px;
 }
 .blog-work-list{
