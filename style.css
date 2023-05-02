@@ -314,7 +314,7 @@ nav ul li a:hover::after{
 /* -------blog----------- */
 #blog{
     padding: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .blog-work-list{
     display: grid;
