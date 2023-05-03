@@ -603,7 +603,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-gap: 20px;
         margin-top: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
 
     .blog-work {
@@ -611,7 +611,7 @@ body {
         border-radius: 5px;
         position: relative;
         overflow: hidden;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
     .blog-work img{
     width: 100%;
