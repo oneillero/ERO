@@ -330,7 +330,7 @@ nav ul li a:hover::after{
 }
 .blog-work img{
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     border-radius: 10px;
     display: block;
     transition: transform 0.20s;
